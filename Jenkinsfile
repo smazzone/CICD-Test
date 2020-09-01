@@ -15,8 +15,14 @@ pipeline {
    }
    stage('Deploy') {
      steps {
-       echo 'Deploying...'
+       echo 'Deploying on Staging...'
      }
+     steps {
+       echo 'Deploying on Integration...'
+     }     
+     steps {
+       echo 'Deploying on QA...'
+     }          
    }
   }
 }
