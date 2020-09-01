@@ -13,16 +13,20 @@ pipeline {
         echo 'Testing...'
      }
    }
-   stage('Deploy') {
+   stage('Deploy on Staging') {
      steps {
        echo 'Deploying on Staging...'
      }
+   }
+   stage('Deploy on Integration') {
      steps {
        echo 'Deploying on Integration...'
-     }     
+     }
+   }      
+   stage('Deploy on QA') {
      steps {
        echo 'Deploying on QA...'
-     }          
-   }
+     }
+   }      
   }
 }
